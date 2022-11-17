@@ -22,6 +22,7 @@ function zsh_add_source_file() {
    fi
 }
 
+zsh_add_source_file "functions.zsh"
 zsh_add_source_file "aliases.zsh"
 zsh_add_source_file "exports.zsh"
 zsh_add_source_file "p10k.zsh"

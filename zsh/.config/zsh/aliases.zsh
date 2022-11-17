@@ -4,10 +4,10 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# Lazygit
+# a quick way to start laygit
 alias g='lazygit'
 
-# Lunarvim as default
+# Lunarvim as default vim
 alias vim='lvim'
 
 # Confirm before overwriting something
@@ -15,12 +15,23 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 
-# Source
+# a quick way to source zshrc
 alias s='source ~/.zshrc'
 
-# Others
+## get rid of command not found ##
+alias cd..='cd ..'
+ 
+## a quick way to get out of current directory ##
+alias ..='cd ..'
+
+# a quick way to clear the terminal
 alias c='clear'
 
+# Debian
+alias apt-get='sudo apt-get'
+
+# mkdir command is used to create a directory:
+alias mkdir='mkdir -pv'
 
 # List with exa
 if command -v exa &> /dev/null; then

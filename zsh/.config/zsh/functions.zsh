@@ -1,3 +1,5 @@
+#!/bin/sh
+
 function weather() {
    city="$1"
 

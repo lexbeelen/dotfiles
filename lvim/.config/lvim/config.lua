@@ -46,7 +46,7 @@ formatters.setup {
   {
     command = "prettier",
     extra_args = { "--print-with", "100" },
-    filetypes = { "typescript", "typescriptreact" },
+    filetypes = { "typescript", "typescriptreact", "css" },
   },
   {
     command = "phpcsfixer",
@@ -72,7 +72,7 @@ lvim.plugins = {
   },
   {
     "jwalton512/vim-blade"
-  },
+  }
 }
 
 local lsp_manager = require("lvim.lsp.manager")

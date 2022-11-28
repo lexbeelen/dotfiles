@@ -1,4 +1,5 @@
-lvim.log.level = "warn"
+vim.log.level = "warn"
+vim.opt.relativenumber = true -- set relative numbered lines
 lvim.format_on_save.enabled = true
 lvim.colorscheme = "tokyonight"
 lvim.transparent_window = true

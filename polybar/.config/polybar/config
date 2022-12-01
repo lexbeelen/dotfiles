@@ -1,6 +1,3 @@
-[global/wm]
-margin-top = 0
-margin-bottom = 0
 
 ; File Inclusion
 include-file = ~/.config/polybar/colors
@@ -9,7 +6,7 @@ include-file = ~/.config/polybar/decor
 [bar/top]
 monitor = ${env:MONITOR:}
 width = 100%
-height = 30
+height = 26
 offset-x = 0%
 offset-y = 0%
 radius = 0
@@ -29,10 +26,11 @@ padding = 1
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = "JetBrainsMono Nerd Font Mono:bold:size=16;3"
-font-1 = "Material:size=16;3"
-; font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-; font-2 = siji:pixelsize=10;1
+; Text Font
+font-0 = "JetBrainsMono Nerd Font:bold:size=13;3"
+
+; Icon Font
+font-1 = "JetBrainsMono Nerd Font:bold:size=15;3"
 
 separator =
 spacing = 0
@@ -52,15 +50,49 @@ cursor-scroll =
 
 modules-left = menu dot LD i3 RD
 ; modules-center = mpd
-modules-right =
+modules-right = volume dot brightness dot LD date RD dot sysmenu
 ; modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
+[module/brightness]
+type = internal/backlight
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+; card = ${system.sys_graphics_card} 
+card = intel_backlight
+
+enable-scroll = true
+
+; Available tags: brightness
+;   <label> (default)
+;   <ramp>
+;   <bar>
+format = <ramp> <label>
+
+; Available tokens:
+;   %percentage% (default)
+label = %percentage%%
+
+; Only applies if <ramp> is used
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
+ramp-6 = 
+ramp-7 = 
+ramp-8 = 
+ramp-9 = 
+ramp-font = 2
+ramp-foreground = ${color.CYAN}
 
 [module/menu]
 type = custom/text
 
-content = ""
-content-font = 1
+content = "?"
+content-font = 2
 content-foreground = ${color.GREEN}
 content-padding = 0
 
@@ -175,6 +207,7 @@ ws-icon-7 = 8;
 ws-icon-8 = 9;
 ws-icon-9 = 10;ﳴ
 ws-icon-default = 
+
 ; NOTE: You cannot skip icons, e.g. to get a ws-icon-6
 ; you must also define a ws-icon-5.
 
@@ -283,6 +316,15 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
 
+[module/sysmenu]
+type = custom/text
+
+content = " "
+content-font = 3
+content-foreground = ${color.RED}
+content-padding = 0
+
+; click-left = ~/.config/i3/rofi/bin/powermenu
 [module/wlan]
 type = internal/network
 interface = wlp59s0
@@ -323,46 +365,97 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 5
 
-date =
-date-alt = " %Y-%m-%d"
+; Seconds to sleep between updates
+interval = 1.0
 
 time = %H:%M
-time-alt = %H:%M:%S
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+time-alt = %d %b, %G
 
-label = %date% %time%
+format = <label>
+format-prefix = " "
+format-prefix-font = 2
+format-prefix-foreground = ${color.CYAN}
+format-background = ${color.BGL}
 
-[module/pulseaudio]
+label = %time%
+label-font = 2
+label-foreground = ${color.CYAN}
+
+[module/volume]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
-label-volume-foreground = ${root.foreground}
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
 
-label-muted = 🔇 muted
-label-muted-foreground = #666
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = false
 
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+
+; Available tags:
+;   <label-volume> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-volume = <ramp-volume> <bar-volume>
+
+; Available tags:
+;   <label-muted> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-muted = <label-muted>
+format-muted-prefix = 
+format-muted-prefix-font = 2
+
+; Available tokens:
+;   %percentage% (default)
+;label-volume = %percentage%%
+
+; Available tokens:
+;   %percentage% (default)
+label-muted = " Mute"
+label-muted-foreground = ${color.FGA}
+
+; Only applies if <bar-volume> is used
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
-bar-volume-indicator = |
+
+bar-volume-indicator = 雷
 bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+bar-volume-indicator-foreground = ${color.BLUE}
+
+bar-volume-fill = 絛
+bar-volume-fill-font = 3
+bar-volume-foreground-0 = ${color.BLUE}
+bar-volume-foreground-1 = ${color.BLUE}
+bar-volume-foreground-2 = ${color.BLUE}
+bar-volume-foreground-3 = ${color.BLUE}
+bar-volume-foreground-4 = ${color.BLUE}
+
+bar-volume-empty = 絛
+bar-volume-empty-font = 3
+bar-volume-empty-foreground = ${color.BGL}
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-volume-4 = 
+ramp-volume-5 = 
+ramp-volume-6 = 
+ramp-volume-7 = 
+ramp-volume-8 = 
+ramp-volume-9 = 
+ramp-volume-font = 2
+ramp-volume-foreground = ${color.BLUE}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/alsa]
 type = internal/alsa

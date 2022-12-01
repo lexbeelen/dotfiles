@@ -6,14 +6,14 @@
 [module/sep]
 type = custom/text
 content = -
-
+content-font = 2
 content-background = ${color.BG}
 content-foreground = ${color.BG}
 
 [module/dot]
 type = custom/text
 content = 
-content-font = 1
+content-font = 2
 content-background = ${color.BG}
 content-foreground = ${color.BGL}
 content-padding = 2
@@ -22,17 +22,20 @@ content-padding = 2
 
 [module/LD]
 type = custom/text
-content = "%{T3}%{T-}"
-content-font = 1
+content = "%{T2}%{T-}"
+content-font = 2
 content-background = ${color.BG}
 content-foreground = ${color.BGL}
 
 [module/RD]
 type = custom/text
-content = "%{T3}%{T-}"
-content-font = 1
+content = "%{T2}%{T-}"
+content-font = 2
 content-background = ${color.BG}
 content-foreground = ${color.BGL}
+[global/wm]
+margin-top = 0
+margin-bottom = 0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;	    __________  ______

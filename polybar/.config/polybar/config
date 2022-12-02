@@ -32,6 +32,8 @@ font-0 = "JetBrainsMono Nerd Font:bold:size=13;3"
 ; Icon Font
 font-1 = "JetBrainsMono Nerd Font:bold:size=16;3"
 
+; Cheatsheet to change the icons https://www.nerdfonts.com/cheat-sheet
+
 separator =
 spacing = 0
 dim-value = 1.0
@@ -91,7 +93,7 @@ ramp-foreground = ${color.CYAN}
 [module/menu]
 type = custom/text
 
-content = "?"
+content = ""
 content-font = 2
 content-foreground = ${color.GREEN}
 content-padding = 0

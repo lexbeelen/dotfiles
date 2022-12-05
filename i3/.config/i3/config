@@ -230,6 +230,6 @@ bindsym $mod+g exec --no-startup-id rofi -show window
 # run on startup
 exec_always --no-startup-id feh --bg-fill $HOME/Pictures/Wallpapers/wallhaven-mdw5ey.jpg
 
-workspace "1" output DP-1-1
-workspace "2" output eDP-1
-exec_always xrandr --output DP-1-1 --mode 2560x1440 --left-of eDP-1 --auto
+workspace "1" output DP-1
+workspace "2" output eDP-1-1
+exec_always xrandr --output DP-1 --mode 2560x1440 --left-of eDP-1-1 --auto

@@ -6,6 +6,12 @@ lvim.transparent_window = true
 lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
+-- Disable Arrow Keys in Vim
+lvim.keys.normal_mode["<Up>"] = "<Nop>"
+lvim.keys.normal_mode["<Down>"] = "<Nop>"
+lvim.keys.normal_mode["<Left>"] = "<Nop>"
+lvim.keys.normal_mode["<Right>"] = "<Nop>"
+
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Trouble",
   r = { "<cmd>Trouble lsp_references<cr>", "References" },

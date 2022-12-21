@@ -8,7 +8,7 @@ alias fgrep='fgrep --color=auto'
 alias g='lazygit'
 
 # Lunarvim as default vim
-alias vim='lvim'
+# alias vim='lvim'
 
 # Confirm before overwriting something
 alias cp='cp -i'

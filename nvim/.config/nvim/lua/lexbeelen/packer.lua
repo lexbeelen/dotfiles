@@ -57,4 +57,7 @@ return require('packer').startup(function(use)
         end
     }
 
+    -- NullLs
+    use 'jose-elias-alvarez/null-ls.nvim'
+
 end)

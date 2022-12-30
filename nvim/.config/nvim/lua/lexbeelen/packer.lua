@@ -60,4 +60,8 @@ return require('packer').startup(function(use)
     -- NullLs
     use 'jose-elias-alvarez/null-ls.nvim'
 
+    -- ToggleTerm
+    use { "akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end }
 end)

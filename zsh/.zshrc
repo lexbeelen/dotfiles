@@ -27,5 +27,3 @@ zsh_add_source_file "aliases.zsh"
 zsh_add_source_file "exports.zsh"
 zsh_add_source_file "p10k.zsh"
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"

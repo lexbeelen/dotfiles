@@ -11,7 +11,10 @@ alias g='lazygit'
 alias t='dooit'
 
 # Lunarvim as default vim
-# alias vim='lvim'
+alias vim='lvim'
+
+# a quick way to start vim
+alias v='vim'
 
 # Confirm before overwriting something
 alias cp='cp -i'

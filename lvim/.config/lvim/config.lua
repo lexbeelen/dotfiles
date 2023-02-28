@@ -67,8 +67,8 @@ formatters.setup {
 
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "eslint", filetypes = { "typescript", "typescriptreact" } },
-  { command = "phpcs", filetypes = { "php" } },
+  { command = "eslint",  filetypes = { "typescript", "typescriptreact" } },
+  { command = "phpcs",   filetypes = { "php" } },
   { command = "phpstan", filetypes = { "php" } }
 }
 
@@ -79,6 +79,9 @@ lvim.plugins = {
   },
   {
     "jwalton512/vim-blade"
+  },
+  {
+    "editorconfig/editorconfig-vim"
   }
 }
 

@@ -55,8 +55,12 @@ formatters.setup {
     extra_args = { "--print-with", "100" },
     filetypes = { "typescript", "typescriptreact", "css" },
   },
+  -- {
+  --   command = "phpcsfixer",
+  --   filetypes = { "php" }
+  -- },
   {
-    command = "phpcsfixer",
+    command = "pint",
     filetypes = { "php" }
   },
   {

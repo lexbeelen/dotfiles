@@ -7,9 +7,6 @@ alias fgrep='fgrep --color=auto'
 # a quick way to start laygit
 alias g='lazygit'
 
-# a quick way to start dooit
-alias t='dooit'
-
 # Lunarvim as default vim
 alias vim='lvim'
 

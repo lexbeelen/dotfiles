@@ -235,7 +235,7 @@ bindsym $mod+d exec --no-startup-id rofi -combi-modi window#drun -show combi -mo
 bindsym $mod+g exec --no-startup-id rofi -show window
 
 # run on startup
-exec_always --no-startup-id feh --bg-fill $HOME/Pictures/Wallpapers/wallhaven-mdw5ey.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/Pictures/Wallpapers/vim-shortcuts_2560x1600.png
 
 workspace "1" output DP-1
 workspace "2" output eDP-1-1

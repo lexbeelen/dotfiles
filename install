@@ -1,7 +1,9 @@
 #!/usr/bin/env sh
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-echo $DOTFILES;
+rm -rf $home/.config/nvim
+ln -s $dotfiles/nvim $home/.config/nvim
+
 mkdir -p $HOME/.local/bin
 
 ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t

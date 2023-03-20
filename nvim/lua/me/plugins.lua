@@ -35,6 +35,9 @@ use('tpope/vim-surround')
 -- Add comments with gcc
 use('tpope/vim-commentary')
 
+-- Blade
+use('jwalton512/vim-blade')
+
 use({
   'sickill/vim-pasta',
   config = function()

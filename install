@@ -7,3 +7,5 @@ ln -s $dotfiles/nvim $home/.config/nvim
 mkdir -p $HOME/.local/bin
 
 ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t
+ln -sf $DOTFILES/scripts/webp-convert $HOME/.local/bin/webp-convert
+

@@ -42,5 +42,6 @@ require("null-ls").setup({
 		require("null-ls").builtins.formatting.jq,
 		require("null-ls").builtins.formatting.rustywind,
 		require("null-ls").builtins.formatting.stylua,
+        require("null-ls").builtins.formatting.blade_formatter,
 	},
 })

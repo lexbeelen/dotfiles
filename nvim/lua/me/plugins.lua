@@ -233,6 +233,14 @@ use({
   end,
 })
 
+use({
+  'folke/trouble.nvim',
+  requires = 'kyazdani42/nvim-web-devicons',
+  config = function()
+    require('trouble').setup()
+  end,
+})
+
 -- Automatically regenerate compiled loader file on save
 vim.cmd([[
   augroup packer_user_config

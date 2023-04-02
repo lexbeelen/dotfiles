@@ -31,11 +31,7 @@ require('lspconfig')['tsserver'].setup{
 }
 
 require('lspconfig')['tailwindcss'].setup{
-  on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-    client.server_capabilities.documentFormattingProvider = false
-    client.server_capabilities.documentRangeFormattingProvider = false
-  end,
+  on_attach = on_attach,
   capabilities = capabilities,
 }
 

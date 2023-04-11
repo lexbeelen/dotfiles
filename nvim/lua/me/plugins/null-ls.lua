@@ -29,6 +29,7 @@ require("null-ls").setup({
 		}),
 		require("null-ls").builtins.diagnostics.proselint,
 		require("null-ls").builtins.diagnostics.gitlint,
+        require("null-ls").builtins.diagnostics.yamllint,
 		require("null-ls").builtins.diagnostics.solhint,
 		require("null-ls").builtins.diagnostics.trail_space.with({ disabled_filetypes = { "NvimTree" } }),
 		require("null-ls").builtins.formatting.eslint_d.with({
@@ -43,5 +44,6 @@ require("null-ls").setup({
 		require("null-ls").builtins.formatting.rustywind,
 		require("null-ls").builtins.formatting.stylua,
         require("null-ls").builtins.formatting.blade_formatter,
+        require("null-ls").builtins.formatting.yamlfmt,
 	},
 })

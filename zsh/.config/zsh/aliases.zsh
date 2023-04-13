@@ -13,6 +13,9 @@ alias vim='nvim'
 # a quick way to start vim
 alias v='vim'
 
+# a quick way to start kubectl
+alias k='kubectl'
+
 # Confirm before overwriting something
 alias cp='cp -i'
 alias mv='mv -i'
@@ -23,7 +26,7 @@ alias s='source ~/.zshrc'
 
 ## get rid of command not found ##
 alias cd..='cd ..'
- 
+
 ## a quick way to get out of current directory ##
 alias ..='cd ..'
 

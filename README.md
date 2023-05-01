@@ -2,15 +2,10 @@
 
 ## Installing
 
-You will need `git` and GNU `stow`
+You will need `git`
 
-Clone into your `$HOME` directory or `~`
-
-```bash
-git clone https://github.com/lexbeelen/dotfiles.git ~
-```
+Clone into your `$HOME` directory or `~` and run the install script
 
 ```bash
-stow */ # Everything (the '/' ignores the README)
+git clone https://github.com/lexbeelen/dotfiles.git ~ && ~/dotfiles/install
 ```
-

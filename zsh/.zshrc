@@ -11,7 +11,6 @@ export ZSH="$HOME/.oh-my-zsh"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-source <(kubectl completion zsh)
 
 export ZCONFIGDOTDIR=$HOME/.config/zsh
 
@@ -28,3 +27,5 @@ zsh_add_source_file "aliases.zsh"
 zsh_add_source_file "exports.zsh"
 zsh_add_source_file "p10k.zsh"
 
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh

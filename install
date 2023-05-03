@@ -7,6 +7,9 @@ ln -s $DOTFILES/nvim $HOME/.config/nvim
 rm -rf $HOME/.config/i3
 ln -s $DOTFILES/i3/.config/i3 $HOME/.config/i3
 
+rm -rf $HOME/.config/i3status
+ln -s $DOTFILES/i3status/.config/i3status $HOME/.config/i3status
+
 rm -rf $HOME/.config/kitty
 ln -s $DOTFILES/kitty/.config/kitty $HOME/.config/kitty
 

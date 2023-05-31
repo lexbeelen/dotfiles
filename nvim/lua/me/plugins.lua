@@ -91,11 +91,15 @@ use({
     'jessarcher/cmp-path',
     'onsails/lspkind-nvim',
     'saadparwaiz1/cmp_luasnip',
+    "hrsh7th/cmp-copilot",
   },
   config = function()
     require('me.plugins.cmp')
   end,
 })
+
+-- Copilot
+use('github/copilot.vim')
 
 -- Tokyo Night Them
 use({'folke/tokyonight.nvim',

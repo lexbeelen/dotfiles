@@ -26,6 +26,5 @@ zsh_add_source_file "functions.zsh"
 zsh_add_source_file "aliases.zsh"
 zsh_add_source_file "exports.zsh"
 zsh_add_source_file "p10k.zsh"
-
-source /usr/share/fzf/completion.zsh
-source /usr/share/fzf/key-bindings.zsh
+zsh_add_source_file "/fzf/completion.zsh"
+zsh_add_source_file "/fzf/key-bindings.zsh"

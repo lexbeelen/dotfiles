@@ -1,4 +1,4 @@
---[[
+--[[ini
 
 =====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
@@ -193,7 +193,20 @@ require('lazy').setup({
     },
     build = ':TSUpdate',
   },
-
+  {
+    'jose-elias-alvarez/null-ls.nvim',
+    config = function()
+      local null_ls = require "null-ls"
+      -- need to import first
+      null_ls.setup {
+        sources = {
+          -- null_ls.builtins.formatting.clang_format,
+          -- null_ls.builtins.formatting.eslint,
+          null_ls.builtins.formatting.blade_formatter,
+        },
+      }
+    end,
+  },
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.

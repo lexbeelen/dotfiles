@@ -132,7 +132,7 @@ require('lazy').setup({
       end,
     },
   },
-
+  'phpactor/phpactor',
   {
     -- Theme inspired by Atom
     'folke/tokyonight.nvim',
@@ -200,9 +200,10 @@ require('lazy').setup({
       -- need to import first
       null_ls.setup {
         sources = {
-          -- null_ls.builtins.formatting.clang_format,
-          -- null_ls.builtins.formatting.eslint,
           null_ls.builtins.formatting.blade_formatter,
+          null_ls.builtins.formatting.pint,
+          null_ls.builtins.diagnostics.phpstan,
+          null_ls.builtins.formatting.rustywind,
         },
       }
     end,
@@ -211,7 +212,7 @@ require('lazy').setup({
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
   require 'kickstart.plugins.autoformat',
-  -- require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.debug',
 
   -- NOTE: The import below automatically adds your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    You can use this folder to prevent any conflicts with this init.lua if you're interested in keeping
@@ -387,8 +388,9 @@ require('nvim-treesitter.configs').setup {
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+vim.keymap.set('n', '<leader>E', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
 
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.

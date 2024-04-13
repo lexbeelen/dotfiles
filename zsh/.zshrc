@@ -29,3 +29,13 @@ zsh_add_source_file "bindkeys.zsh"
 zsh_add_source_file "p10k.zsh"
 zsh_add_source_file "/fzf/completion.zsh"
 zsh_add_source_file "/fzf/key-bindings.zsh"
+
+# bun completions
+[ -s "/home/mothership/.bun/_bun" ] && source "/home/mothership/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform

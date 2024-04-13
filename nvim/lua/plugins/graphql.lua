@@ -7,4 +7,12 @@ return {
       end
     end,
   },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        graphql = {},
+      },
+    },
+  },
 }

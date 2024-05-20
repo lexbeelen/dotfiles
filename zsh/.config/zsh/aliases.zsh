@@ -45,8 +45,8 @@ if command -v exa &> /dev/null; then
   alias tree="exa --icons --group-directories-first --tree --level=2"
 fi
 
-if [[ $TERM == "xterm-kitty" ]]; then
-  alias ssh="kitty +kitten ssh"
-fi
-
+# if [[ $TERM == "xterm-kitty" ]]; then
+#   alias ssh="kitty +kitten ssh"
+# fi
+alias dep='vendor/bin/dep'
 alias icat="kitty +kitten icat"

@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "intelephense", "tsserver", "tailwindcss" },
+        ensure_installed = { "lua_ls", "intelephense", "tsserver", "tailwindcss", "rust_analyzer" },
       })
     end,
   },
@@ -19,6 +19,7 @@ return {
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
       lspconfig.tailwindcss.setup({})
+      lspconfig.rust_analyzer.setup({})
       lspconfig.intelephense.setup({
         filetypes = { "php", "blade" },
         settings = {

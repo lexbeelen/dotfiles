@@ -20,7 +20,7 @@ return {
   },
   main = 'nvim-treesitter.configs',
   opts = {
-    ensure_installed = "all",
+    ensure_installed = { 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'rust', 'php'},
     auto_install = true,
     highlight = {
       enable = true,

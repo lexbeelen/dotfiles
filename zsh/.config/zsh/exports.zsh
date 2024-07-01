@@ -7,4 +7,6 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/var/lib/snapd/snap/bin:$PATH"
 
+export AWS_DEFAULT_PROFILE="lexbeelen"
+
 [[ -n $TMUX ]] && export TERM="xterm-256color"

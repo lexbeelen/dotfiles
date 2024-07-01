@@ -7,8 +7,14 @@ alias fgrep='fgrep --color=auto'
 # a quick way to start laygit
 alias g='lazygit'
 
-# Lunarvim as default vim
+# Lazyvim
 alias vim='nvim'
+
+# Kickstart vim 
+alias kvim='NVIM_APPNAME="kvim" nvim'
+
+# Testing vim configuration
+alias tvim='NVIM_APPNAME="tvim" nvim'
 
 # a quick way to start vim
 alias v='vim'
@@ -38,6 +44,9 @@ alias apt-get='sudo apt-get'
 
 # mkdir command is used to create a directory:
 alias mkdir='mkdir -pv'
+
+# better preview modus
+alias cat='bat'
 
 # List with exa
 if command -v exa &> /dev/null; then

@@ -4,6 +4,9 @@ DOTFILES=$(cd "$(dirname "$1")" && pwd)
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
 
+rm -rf $HOME/.config/tvim
+ln -s $DOTFILES/tvim $HOME/.config/tvim
+
 rm -rf $HOME/.config/i3
 ln -s $DOTFILES/i3/.config/i3 $HOME/.config/i3
 
@@ -12,6 +15,9 @@ ln -s $DOTFILES/i3status/.config/i3status $HOME/.config/i3status
 
 rm -rf $HOME/.config/kitty
 ln -s $DOTFILES/kitty/.config/kitty $HOME/.config/kitty
+
+rm -rf $HOME/.config/picom
+ln -s $DOTFILES/picom/.config/picom $HOME/.config/picom
 
 rm -rf $HOME/.tmux.conf
 ln -s $DOTFILES/tmux/.tmux.conf $HOME/.tmux.conf

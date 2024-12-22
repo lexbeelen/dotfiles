@@ -72,6 +72,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xset s 14400
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
@@ -259,4 +260,6 @@ bar {
   }
 }
 
-exec_always xrandr --dpi 96 --output DP-1 --mode 1920x1080 --left-of eDP-1-1 --auto --output eDP-1-1 --mode 1920x1080
+# exec_always xrandr --dpi 96 --output DP-1 --mode 1920x1080 --left-of eDP-1-1 --auto --output eDP-1-1 --mode 1920x1080
+exec_always xrandr --dpi 96 --output DP-1 --mode 1920x1080 --left-of eDP-1-1 \
+                   --output DP-3 --mode 1920x1080 --same-as eDP-1-1 --output eDP-1-1 --auto

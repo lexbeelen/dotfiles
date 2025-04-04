@@ -101,6 +101,7 @@ bindsym $mod+Return exec --no-startup-id ~/.local/bin/kitty
 bindsym $mod+Shift+w exec --no-startup-id google-chrome-stable
 bindsym $mod+Shift+s exec --no-startup-id flameshot gui
 bindsym $mod+Shift+f exec --no-startup-id nautilus
+bindsym $mod+Shift+o exec --no-startup-id /opt/cursor.appimage
 
 # kill focused window
 bindsym $mod+Shift+q kill
